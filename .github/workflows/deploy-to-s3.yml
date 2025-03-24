@@ -21,10 +21,10 @@ jobs:
       - name: Upload CSS Files to S3 with Correct MIME Type
         run: |
           # Upload CSS files with the correct MIME type
-          aws s3 cp Styles.css s3://${{ secrets.S3_BUCKET_NAME }}/ --content-type "text/css"
+          aws s3 cp Styles.css s3://${{ secrets.S3_BUCKET_NAME }}/ --content-type "text/css" --acl public-read
           
 
       - name: Sync Website Files to S3 with Public Read Access
         run: |
           # Sync other files to S3, excluding CSS (already uploaded)
-          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete --acl public-read --exclude "*.css"
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete --acl public-read --exclude "*.css" 
