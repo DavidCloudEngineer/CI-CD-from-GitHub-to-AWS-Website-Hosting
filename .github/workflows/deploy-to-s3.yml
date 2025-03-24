@@ -18,6 +18,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
+     - name: Upload CSS Files to S3 with Correct MIME Type
+        run: |
+          # Upload CSS files with the correct MIME type
+          aws s3 cp ./path/to/your/stylesheets/ s3://${{ secrets.S3_BUCKET_NAME }}/ --recursive --exclude "*" --include "*.css" --content-type "text/css"
+
       - name: Sync Website Files to S3 with Public Read Access
         run: |
-          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete --acl public-read
+          # Sync other files to S3, excluding CSS (already uploaded)
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete --acl public-read --exclude "*.css"
