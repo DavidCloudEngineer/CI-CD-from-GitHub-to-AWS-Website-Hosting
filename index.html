@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>David Ramroop Cloud Engineer</title>
+    <title>David Ramroop | Cloud Engineer</title>
 </head>
-<body>
 
-    <div class="glowbox"> 
-        <h1>David Ramroop</h1>
-        <h2>Aspiring Cloud Engineer</h2>
-    </div>
-    <div class="glowbox">
-        <ul class="nav-bar">
-            <li><a href="index.html">Home</a>
-                <ul class="sub-menu">
-                    <li>Skills</a></li>
-                    <li>Experience</li>
-                    <li>Education and Certificates</li>
-                    <li>Interests</li>
-                </ul>
-            </li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+<body>
+    <div class="content">
+        <div class="glowbox">
+            <h1>David Ramroop</h1>
+            <h2>Aspiring Cloud Engineer</h2>
+        </div>
+        <nav class="glowbox">
+            <ul class="nav-bar">
+                <li><a href="index.html">Home</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Experience</a></li>
+                        <li><a href="#">Education and Certificates</a></li>
+                        <li><a href="#">Interests</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </div>
     <footer>
         <div class="glowbox">
-            <p>David Ramroop &copy; 2021</p>
+            <p>David Ramroop &copy; <span id="year"></span></p>
         </div>
     </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
