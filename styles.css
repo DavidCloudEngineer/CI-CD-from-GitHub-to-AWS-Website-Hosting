@@ -15,26 +15,27 @@ body {
 
 }
 
+.intro {
+    background-color: #001F3F;
+    padding: 100px 0;
+    text-align: center;
+    color: #ABFFFF;
+}
 
-h1,
-h2 {
+
+h1 {
     text-align: center;
     margin: 0;
     padding: 0;
+    border: 0;
     color: #00FFFF;
-}
-
-h1 {
     font-size: 35px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-h2 {
-    font-size: 24px;
-    font-weight: 400;
 
-}
+
 
 
 
