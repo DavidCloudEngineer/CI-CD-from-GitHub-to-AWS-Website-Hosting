@@ -15,11 +15,24 @@ body {
 
 }
 
+.addcontent {
+    flex: 1;
+    padding: 20px 30px;
+    border: auto;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #001F3F;
+    color: #E0E0E0;
+    text-align: justify;
+    font-size: 16px;
+}
+
 .intro {
     background-color: #001F3F;
-    padding: 100px 0;
+    padding: 100px 30px;
     text-align: center;
     color: #ABFFFF;
+    font-size: 16px;
 }
 
 
@@ -29,7 +42,7 @@ h1 {
     padding: 0;
     border: 0;
     color: #00FFFF;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -45,9 +58,11 @@ h1 {
     justify-content: center;
     background-color: #001F3F;
     padding: 20px 0;
-    margin-bottom: 20px;
+    margin: auto;
+    border: auto;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+
 }
 
 .nav-bar li {
@@ -58,7 +73,7 @@ h1 {
 .nav-bar a {
     color: #E0E0E0;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     transition: color 0.3s, border-bottom 0.3s;
     padding: 5px 10px;
@@ -73,8 +88,6 @@ h1 {
     display: none;
     position: absolute;
     list-style-type: none;
-    top: 100%;
-    left: 0;
     background-color: #001F3F;
     padding: 0px;
     border: 0px solid #00FFFF;
@@ -84,15 +97,18 @@ h1 {
 
 .nav-bar li:hover .sub-menu {
     display: block;
+    position: absolute;
 
 }
 
 .sub-menu li a {
     color: #E0E0E0;
-    display: block;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
     padding: 0px;
     border: 0px;
-    font-size: 16px;
+    font-size: 14px;
     transition: background 0.3s;
 }
 
@@ -114,13 +130,13 @@ h1 {
 
 .glowbox {
     background-color: #001F3F;
-    padding: 15px;
+    padding: 8px;
     border-radius: 5px;
     border: 2px solid #00FFFF;
     box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
-    animation: pulseGlow 2s infinite alternate;
+    animation: pulseGlow 1.0s infinite alternate;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 
